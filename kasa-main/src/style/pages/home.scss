@@ -1,0 +1,22 @@
+.imageHome {
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  & img {
+    height: 223px;
+    width: 100%;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 25px;
+    -webkit-filter: brightness(70%);
+    filter: brightness(70%);
+    object-fit: cover;
+  }
+  & span {
+    position: absolute;
+    top: 80px;
+    color: #ffffff;
+    font-size: 48px;
+  }
+}
