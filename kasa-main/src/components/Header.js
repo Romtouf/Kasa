@@ -10,8 +10,18 @@ function Header() {
           <img src={logo} alt="Logo"></img>
         </div>
         <div className="linksNavigation">
-          <NavLink to="/">Accueil</NavLink>
-          <NavLink to="/about">À propos</NavLink>
+          <NavLink
+            to="/"
+            className={(nav) => (nav.isActive ? "nav-active" : "")}
+          >
+            Accueil
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={(nav) => (nav.isActive ? "nav-active" : "")}
+          >
+            À propos
+          </NavLink>
         </div>
       </div>
     </>
