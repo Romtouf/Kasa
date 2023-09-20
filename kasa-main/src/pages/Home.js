@@ -1,12 +1,19 @@
 import React from "react";
-import imageHome from "../assets/image-source-1.svg";
+import Banner from "../components/Banner";
+import Card from "../components/Card";
+import data from "../data/annonces.json";
+import { NavLink } from "react-router-dom";
 
 const Home = () => {
   return (
     <>
-      <div className="imageHome">
-        <img src={imageHome} alt="Bord de mer rocailleux"></img>
-        <span>Chez vous, partout et ailleurs</span>
+      <Banner />
+      <div className="galleryHome">
+        {data.map(({ id, title, cover }) => (
+          <NavLink className="galleryCard" key={id} to={`/logement/${id}`}>
+            <Card title={title} cover={cover} />
+          </NavLink>
+        ))}
       </div>
     </>
   );

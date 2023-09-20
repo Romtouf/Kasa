@@ -6,13 +6,12 @@ function Header() {
   return (
     <>
       <div className="header">
-        {" "}
         <div className="imageNavigation">
           <img src={logo} alt="Logo"></img>
         </div>
         <div className="linksNavigation">
           <NavLink to="/">Accueil</NavLink>
-          <NavLink to="/a-propos">À propos</NavLink>
+          <NavLink to="/about">À propos</NavLink>
         </div>
       </div>
     </>

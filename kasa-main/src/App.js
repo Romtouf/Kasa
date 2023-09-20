@@ -1,6 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
+import About from "./pages/About";
+import Error from "./pages/Error";
+import Logements from "./pages/Logements";
 
 function App() {
   return (
@@ -8,10 +12,11 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path='/fiche-logement' element={<Logements />} />
-      <Route path='/a-propos' element={<About />} />
-      <Route path='*' element={<Error />} /> */}
+        <Route path="/logement/:id" element={<Logements />} />
+        <Route path="/about" element={<About />} />
+        <Route path="*" element={<Error />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
