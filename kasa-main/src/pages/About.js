@@ -8,9 +8,9 @@ const About = () => {
     <>
       <Banner />
       <div className="about">
-        {about.map((id, title, content) => (
-          <div className="aboutCollapse" key={id}>
-            <Collapse title={title} content={content} />
+        {about.map((aboutId, aboutTitle, aboutContent) => (
+          <div className="aboutCollapse" key={aboutId}>
+            <Collapse title={aboutTitle} content={aboutContent} />
           </div>
         ))}
       </div>

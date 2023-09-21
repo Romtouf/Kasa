@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import arrowUp from "../assets/arrowUp.svg";
 
-const Collapse = ({ title, content }) => {
+const Collapse = ({ aboutTitle, aboutContent }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="collapse">
       <div className="collapseBlock"></div>
       <h3 className="collapseTitle" onClick={() => setIsOpen(!isOpen)}>
-        {title}
+        {aboutTitle}
       </h3>
       <img
         className={isOpen ? "arrow arrowUp" : "arrow arrowDown"}
@@ -20,7 +20,7 @@ const Collapse = ({ title, content }) => {
         id="collapseTextDesign"
         className={isOpen ? "collapseText" : "collapseHidden"}
       >
-        {content}
+        {aboutContent}
       </p>
     </div>
   );
