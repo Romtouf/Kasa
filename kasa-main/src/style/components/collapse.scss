@@ -1,26 +1,14 @@
-.collapse {
-  margin: -10px;
-  position: relative;
-  display: flex;
-
-  justify-content: flex-end;
-}
-
-.collapseTitle {
+.collapseBlock {
   color: white;
-  //   & h3 {
-  //     display: flex;
-  //     justify-content: center;
-  //     align-items: center;
-  //   }
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 15px;
 }
 
 .collapseHidden {
   visibility: hidden;
-}
-
-#collapseTextDesign {
-  height: auto;
 }
 
 .collapseText {

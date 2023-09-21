@@ -8,7 +8,7 @@ const About = () => {
     <>
       <Banner />
       <div className="about">
-        {about.map((aboutId, aboutTitle, aboutContent) => (
+        {about.map(({ aboutId, aboutTitle, aboutContent }) => (
           <div className="aboutCollapse" key={aboutId}>
             <Collapse title={aboutTitle} content={aboutContent} />
           </div>
