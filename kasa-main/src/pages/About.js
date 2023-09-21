@@ -1,5 +1,6 @@
 import React from "react";
 import Banner from "../components/Banner";
+import Collapse from "../components/Collapse";
 
 const About = () => {
   const dataAbout = [
@@ -24,7 +25,17 @@ const About = () => {
       text: "La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.",
     },
   ];
-  return <Banner />;
+  return (
+    <>
+      <Banner />
+      <Collapse />
+      <div className="about">
+        {dataAbout.map((data) => (
+          <div className="aboutCollapse" key={data.id}></div>
+        ))}
+      </div>
+    </>
+  );
 };
 
 export default About;
