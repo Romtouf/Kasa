@@ -7,11 +7,9 @@ const Collapse = ({ aboutTitle, aboutContent }) => {
   return (
     <div className="collapse">
       <div className="collapseBlock">
-        <h3 className="collapseTitle" onClick={() => setIsOpen(!isOpen)}>
-          {aboutTitle}
-        </h3>
+        <h3 className="collapseTitle">{aboutTitle}</h3>
         <img
-          // Comment passer la fonction au clic + l'animation de la flèche ?
+          onClick={() => setIsOpen(!isOpen)}
           className={isOpen ? "arrow arrowDown" : "arrow arrowUp"}
           src={arrowUp}
           alt="Flèches pour lire le contenu"
