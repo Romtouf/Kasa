@@ -8,8 +8,6 @@ const Banner = () => {
   const location = useLocation();
 
   useEffect(() => {
-    console.log(location.pathname);
-
     if (location.pathname === "/about") {
       setIsAbout(true);
     }

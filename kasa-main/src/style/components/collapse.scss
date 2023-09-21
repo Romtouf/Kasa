@@ -1,0 +1,47 @@
+.collapse {
+  margin: -10px;
+  position: relative;
+  display: flex;
+
+  justify-content: flex-end;
+}
+
+.collapseTitle {
+  color: white;
+  //   & h3 {
+  //     display: flex;
+  //     justify-content: center;
+  //     align-items: center;
+  //   }
+}
+
+.collapseHidden {
+  visibility: hidden;
+}
+
+#collapseTextDesign {
+  height: auto;
+}
+
+.collapseText {
+  color: $color-1;
+  background: #f6f6f6;
+  padding: 10px;
+  visibility: visible;
+  height: auto;
+  transition: visibility 0.5s ease-in-out, opacity 0.5s ease-in-out,
+    height 0.2s ease-in-out;
+}
+
+.arrow {
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.arrowUp {
+  transform: rotate(0deg);
+}
+
+.arrowDown {
+  transform: rotate(180deg);
+}
