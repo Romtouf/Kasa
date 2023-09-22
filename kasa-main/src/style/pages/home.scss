@@ -1,8 +1,7 @@
 .galleryHome {
-  display: flex;
-  justify-content: center;
+  @include flex(row, center, center);
   flex-wrap: wrap;
-  background-color: #f6f6f6;
+  background-color: $color-2;
   gap: 50px;
   margin: 0 100px;
   padding: 50px;
@@ -16,8 +15,7 @@
 }
 
 .galleryCard {
-  display: flex;
-  justify-content: center;
+  @include flex(row, center, none);
   position: relative;
   height: 340px;
   width: 30.5%;
@@ -40,11 +38,11 @@
 
 @media (max-width: 500px) {
   .galleryHome {
-    flex-direction: column;
+    @include flex(column, none, none);
     margin: 20px;
     gap: 20px;
     padding: 0;
-    background: #ffffff;
+    background: $color-3;
   }
 
   .galleryCard {

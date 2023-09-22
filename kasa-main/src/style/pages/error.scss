@@ -1,8 +1,5 @@
 .error {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flex(column, center, center);
   & p {
     font-size: 288px;
     font-weight: 700;
@@ -10,16 +7,14 @@
     margin: 150px 0;
   }
   & span {
-    font-size: 36px;
-    font-weight: 500;
+    @include font-size-weight(36px);
     color: $color-1;
     margin-bottom: 150px;
   }
 }
 
 #linkError {
-  font-size: 18px;
-  font-weight: 500;
+  @include font-size-weight(18px);
   color: $color-1;
   margin-bottom: 150px;
 }
@@ -30,11 +25,11 @@
       font-size: 96px;
     }
     & span {
-      font-size: 18px;
+      @include font-size-weight(18px);
       text-align: center;
     }
   }
   #linkError {
-    font-size: 14px;
+    @include font-size-weight(14px);
   }
 }

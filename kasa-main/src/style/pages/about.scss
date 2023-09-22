@@ -1,6 +1,7 @@
 .about {
-  display: flex;
-  flex-direction: column;
+  @include flex(column, center, center);
+  // display: flex;
+  // flex-direction: column;
   gap: 20px;
   margin: 0 100px 100px 100px;
   padding: 0 100px;

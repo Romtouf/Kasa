@@ -3,4 +3,24 @@
   margin: 0;
 }
 
+// Variables
 $color-1: #ff6060;
+$color-2: #f6f6f6;
+$color-3: #ffffff;
+
+// Mixins
+@mixin font-size-weight($size) {
+  font-size: $size;
+  font-weight: 500;
+}
+
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin br-none($display) {
+  display: $display;
+}

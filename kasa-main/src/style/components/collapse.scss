@@ -1,20 +1,21 @@
-.collapse {
-  display: flex;
-  flex-direction: column;
-}
+// .collapse {
+//   display: flex;
+//   flex-direction: column;
+// }
 
 .collapseBlock {
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  color: $color-3;
+  @include flex(row, space-between, center);
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
   padding: 20px 15px;
 }
 
 .collapseTitle {
   & h3 {
     color: blue;
-    font-size: 50px;
+    @include font-size-weight(24px);
   }
 }
 
