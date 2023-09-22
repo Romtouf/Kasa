@@ -11,4 +11,12 @@
   height: 52px;
   background: $color-1;
   border-radius: 5px;
+  margin: auto;
+}
+
+@media (max-width: 500px) {
+  .about {
+    margin: 20px;
+    padding: 0;
+  }
 }

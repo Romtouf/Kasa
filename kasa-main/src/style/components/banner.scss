@@ -7,8 +7,7 @@
   & img {
     height: 223px;
     width: 100%;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin: 0 100px;
     border-radius: 25px;
     -webkit-filter: brightness(70%);
     filter: brightness(70%);
@@ -19,5 +18,30 @@
     top: 80px;
     color: #ffffff;
     font-size: 48px;
+  }
+}
+
+.brNone {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .imageHome {
+    justify-content: flex-start;
+    margin-bottom: 0;
+    & img {
+      margin: 0 20px;
+      width: 92%;
+      height: 111px;
+    }
+    & span {
+      top: 30px;
+      font-size: 24px;
+      left: 40px;
+    }
+  }
+
+  .brNone {
+    display: block;
   }
 }

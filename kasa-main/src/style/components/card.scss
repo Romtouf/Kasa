@@ -7,3 +7,9 @@
   font-weight: 500;
   color: #ffffff;
 }
+
+@media (max-width: 500px) {
+  .infos {
+    top: 210px;
+  }
+}

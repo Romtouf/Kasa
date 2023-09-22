@@ -20,7 +20,10 @@ const Banner = () => {
         ) : (
           <>
             <img src={imageHome} alt="Bord de mer rocailleux"></img>
-            <span>Chez vous, partout et ailleurs</span>
+            <span>
+              Chez vous, <br className="brNone" />
+              partout et ailleurs
+            </span>
           </>
         )}
       </div>

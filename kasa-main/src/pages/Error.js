@@ -5,7 +5,10 @@ const Error = () => {
   return (
     <div className="error">
       <p>404</p>
-      <span>Oup's ! La page que vous demandez n'existe pas.</span>
+      <span>
+        Oup's ! La page que <br className="brNone" />
+        vous demandez n'existe pas.
+      </span>
       <NavLink
         to="/"
         id="linkError"

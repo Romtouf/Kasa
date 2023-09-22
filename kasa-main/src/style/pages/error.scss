@@ -23,3 +23,18 @@
   color: $color-1;
   margin-bottom: 150px;
 }
+
+@media (max-width: 500px) {
+  .error {
+    & p {
+      font-size: 96px;
+    }
+    & span {
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+  #linkError {
+    font-size: 14px;
+  }
+}
