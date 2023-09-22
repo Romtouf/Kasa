@@ -20,14 +20,11 @@
   }
 }
 
-.brNone {
-  display: none;
-}
+@include br-none(none);
 
 @media (max-width: 500px) {
   .imageHome {
     @include flex(row, flex-start, center);
-    // justify-content: flex-start;
     margin-bottom: 0;
     & img {
       margin: 0 20px;
@@ -41,7 +38,5 @@
     }
   }
 
-  .brNone {
-    display: block;
-  }
+  @include br-none(block);
 }

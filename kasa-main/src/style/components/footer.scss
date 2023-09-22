@@ -1,6 +1,6 @@
 .footer {
   @include flex(column, center, center);
-  background-color: #000000;
+  background-color: $color-4;
   height: 209px;
   gap: 40px;
   & span {
@@ -11,20 +11,15 @@
 }
 
 .imageFooter {
-  @include flex(row, center, center); // display: flex;
-  // justify-content: center;
-  // align-items: center;
+  @include flex(row, center, center);
 }
 
-.brNone {
-  display: none;
-}
+@include br-none(none);
 
 @media (max-width: 500px) {
   .footer span {
     text-align: center;
   }
-  .brNone {
-    display: block;
-  }
+
+  @include br-none(block);
 }
