@@ -1,7 +1,11 @@
-.imageHome {
+.image_home {
   @include flex(row, center, center);
   position: relative;
   margin-bottom: 50px;
+  @media (max-width: 500px) {
+    @include flex(row, flex-start, center);
+    margin-bottom: 0;
+  }
 
   & img {
     height: 223px;
@@ -11,32 +15,27 @@
     -webkit-filter: brightness(70%);
     filter: brightness(70%);
     object-fit: cover;
+    @media (max-width: 500px) {
+      margin: 0 20px;
+      width: 92%;
+      height: 111px;
+    }
   }
   & span {
     position: absolute;
     top: 80px;
     color: $color-3;
     @include font-size-weight(48px);
+    @media (max-width: 500px) {
+      top: 30px;
+      left: 40px;
+      @include font-size-weight(24px);
+    }
   }
 }
 
 @include br-none(none);
 
 @media (max-width: 500px) {
-  .imageHome {
-    @include flex(row, flex-start, center);
-    margin-bottom: 0;
-    & img {
-      margin: 0 20px;
-      width: 92%;
-      height: 111px;
-    }
-    & span {
-      top: 30px;
-      left: 40px;
-      @include font-size-weight(24px);
-    }
-  }
-
   @include br-none(block);
 }

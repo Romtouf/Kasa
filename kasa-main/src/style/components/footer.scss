@@ -3,23 +3,21 @@
   background-color: $color-4;
   height: 209px;
   gap: 40px;
+  &_image {
+    @include flex(row, center, center);
+  }
   & span {
     color: $color-3;
     @include flex(row, center, center);
     @include font-size-weight(24px);
+    @media (max-width: 500px) {
+      text-align: center;
+    }
   }
-}
-
-.imageFooter {
-  @include flex(row, center, center);
 }
 
 @include br-none(none);
 
 @media (max-width: 500px) {
-  .footer span {
-    text-align: center;
-  }
-
   @include br-none(block);
 }

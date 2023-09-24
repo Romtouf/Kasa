@@ -1,23 +1,17 @@
-.about {
+.about_main {
   @include flex(column, center, center);
-  // display: flex;
-  // flex-direction: column;
   gap: 20px;
   margin: 0 100px 100px 100px;
   padding: 0 100px;
-}
-
-.aboutCollapse {
-  width: 100%;
-  height: 52px;
-  background: $color-1;
-  border-radius: 5px;
-  margin: auto;
-}
-
-@media (max-width: 500px) {
-  .about {
+  @media (max-width: 500px) {
     margin: 20px;
     padding: 0;
+  }
+  &_collapse {
+    width: 100%;
+    height: 52px;
+    background: $color-1;
+    border-radius: 5px;
+    margin: auto;
   }
 }

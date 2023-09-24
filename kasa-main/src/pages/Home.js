@@ -8,9 +8,9 @@ const Home = () => {
   return (
     <>
       <Banner />
-      <div className="galleryHome">
+      <div className="gallery">
         {data.map(({ id, title, cover }) => (
-          <NavLink className="galleryCard" key={id} to={`/logement/${id}`}>
+          <NavLink className="gallery_cards" key={id} to={`/logement/${id}`}>
             <Card title={title} cover={cover} />
           </NavLink>
         ))}

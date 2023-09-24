@@ -1,27 +1,45 @@
 .header {
   @include flex(row, space-between, center);
   margin: 50px 0;
-}
-
-.imageNavigation {
-  margin-left: 100px;
-}
-
-.linksNavigation {
-  @include flex(row, flex-start, center);
-
-  margin-right: 100px;
-  gap: 57px;
-  & a {
-    text-decoration: none;
-    color: $color-1;
-    @include font-size-weight(24px);
+  @media (max-width: 500px) {
+    position: relative;
+    margin: 20px -20px 30px 20px;
+  }
+  &_image {
+    margin-left: 100px;
+    @media (max-width: 500px) {
+      margin: 0;
+      & img {
+        width: 145px;
+        height: 47px;
+      }
+    }
+  }
+  &_links {
+    @include flex(row, flex-start, center);
+    margin-right: 100px;
+    gap: 57px;
+    @media (max-width: 500px) {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      align-items: center;
+      margin-right: 0;
+      gap: 26px;
+    }
+    & a {
+      text-decoration: none;
+      color: $color-1;
+      @include font-size-weight(24px);
+      @media (max-width: 500px) {
+        @include font-size-weight(12px);
+      }
+    }
   }
 }
 
 .nav-active {
   position: relative;
-
   &::after {
     content: "";
     height: 2px;
@@ -39,37 +57,6 @@
       to {
         width: 100%;
       }
-    }
-  }
-}
-
-@media (max-width: 500px) {
-  body {
-    margin: 0;
-  }
-  .header {
-    position: relative;
-    // gap: 21.5%;
-    margin: 20px -20px 30px 20px;
-  }
-
-  .imageNavigation {
-    margin: 0;
-    & img {
-      width: 145px;
-      height: 47px;
-    }
-  }
-
-  .linksNavigation {
-    position: absolute;
-    top: 20px;
-    right: 40px;
-    align-items: center;
-    margin-right: 0;
-    gap: 26px;
-    & a {
-      @include font-size-weight(12px);
     }
   }
 }

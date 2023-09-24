@@ -5,31 +5,26 @@
     font-weight: 700;
     color: $color-1;
     margin: 150px 0;
+    @media (max-width: 500px) {
+      font-size: 96px;
+    }
   }
   & span {
     @include font-size-weight(36px);
     color: $color-1;
     margin-bottom: 150px;
-  }
-}
-
-#linkError {
-  @include font-size-weight(18px);
-  color: $color-1;
-  margin-bottom: 150px;
-}
-
-@media (max-width: 500px) {
-  .error {
-    & p {
-      font-size: 96px;
-    }
-    & span {
+    @media (max-width: 500px) {
       @include font-size-weight(18px);
       text-align: center;
     }
   }
-  #linkError {
+}
+
+#link_error {
+  @include font-size-weight(18px);
+  color: $color-1;
+  margin-bottom: 150px;
+  @media (max-width: 500px) {
     @include font-size-weight(14px);
   }
 }

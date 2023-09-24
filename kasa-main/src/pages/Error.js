@@ -11,7 +11,7 @@ const Error = () => {
       </span>
       <NavLink
         to="/"
-        id="linkError"
+        id="link_error"
         className={(nav) => (nav.isActive ? "nav-active" : "")}
       >
         Retourner sur la page d'accueil

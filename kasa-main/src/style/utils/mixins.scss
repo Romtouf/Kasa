@@ -1,15 +1,5 @@
-* {
-  font-family: "Montserrat", sans-serif;
-  margin: 0;
-}
-
-// Variables
-$color-1: #ff6060;
-$color-2: #f6f6f6;
-$color-3: #ffffff;
-$color-4: #000000;
-
 // Mixins
+
 @mixin font-size-weight($size) {
   font-size: $size;
   font-weight: 500;
@@ -23,7 +13,7 @@ $color-4: #000000;
 }
 
 @mixin br-none($display) {
-  .brNone {
+  .br_none {
     display: $display;
   }
 }

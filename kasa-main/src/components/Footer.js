@@ -5,12 +5,12 @@ const Footer = () => {
   return (
     <>
       <div className="footer">
-        <div className="imageFooter">
+        <div className="footer_image">
           <img src={logoFooter} alt="Logo"></img>
         </div>
-        <div className="sentenceFooter">
+        <div className="footer_text">
           <span>
-            © 2020 Kasa. All <br className="brNone" />
+            © 2020 Kasa. All <br className="br_none" />
             rights reserved
           </span>
         </div>

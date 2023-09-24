@@ -6,10 +6,10 @@ function Header() {
   return (
     <>
       <div className="header">
-        <div className="imageNavigation">
+        <div className="header_image">
           <img src={logo} alt="Logo"></img>
         </div>
-        <div className="linksNavigation">
+        <div className="header_links">
           <NavLink
             to="/"
             className={(nav) => (nav.isActive ? "nav-active" : "")}
