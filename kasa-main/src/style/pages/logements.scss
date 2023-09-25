@@ -22,11 +22,12 @@
       @include font-size-weight(18px);
     }
   }
-  & h3 {
-    margin-top: 10px;
+  & p {
+    margin-top: 5px;
     color: $color-1;
     @include font-size-weight(18px);
     @media (max-width: 500px) {
+      margin-top: 10px;
       @include font-size-weight(14px);
     }
   }

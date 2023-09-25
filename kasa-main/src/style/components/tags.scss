@@ -1,0 +1,14 @@
+.tag {
+  @include flex(row, flex-start, center);
+  gap: 10px;
+  margin: 20px 0;
+}
+.tag_value {
+  @include flex(row, center, center);
+  @include font-size-weight(14px);
+  background: $color-1;
+  color: $color-3;
+  padding: 5px 30px;
+  border-radius: 10px;
+  height: 25px;
+}

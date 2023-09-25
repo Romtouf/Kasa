@@ -12,9 +12,16 @@ const Logements = () => {
   return (
     <div className="logement">
       <img src={dataLogement.pictures[0]} />
-      <h2>{dataLogement.title}</h2>
-      <h3>{dataLogement.location}</h3>
-      <Tags tags={dataLogement.tags} />
+      <div className="logement_infos">
+        <h2 className="logement_infos_title">{dataLogement.title}</h2>
+        <p className="logement_infos_location">{dataLogement.location}</p>
+        {/* Ajouter le composant Host */}
+      </div>
+      <div className="logement_extras">
+        <Tags tags={dataLogement.tags} />
+        {/* Ajouter le composant Rating */}
+      </div>
+
       {/* <Collapse
         description={dataLogement.description}
         equipments={dataLogement.equipments}
