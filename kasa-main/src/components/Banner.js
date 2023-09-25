@@ -19,7 +19,7 @@ const Banner = () => {
           <img src={imageAbout} alt="Vue sur une chaîne montagneuse"></img>
         ) : (
           <>
-            <img src={imageHome} alt="Bord de mer rocailleux"></img>
+            <img src={imageHome} alt="Bord de mer"></img>
             <span>
               Chez vous, <br className="br_none" />
               partout et ailleurs

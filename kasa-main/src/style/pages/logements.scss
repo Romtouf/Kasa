@@ -1,0 +1,33 @@
+.logement {
+  @include flex(column, center, flex-start);
+  margin: 0 100px;
+  @media (max-width: 500px) {
+    margin: 0 20px;
+  }
+  & img {
+    width: 100%;
+    height: 415px;
+    object-fit: cover;
+    border-radius: 25px;
+    @media (max-width: 500px) {
+      height: 255px;
+    }
+  }
+  & h2 {
+    margin-top: 30px;
+    color: $color-1;
+    @include font-size-weight(36px);
+    @media (max-width: 500px) {
+      margin-top: 15px;
+      @include font-size-weight(18px);
+    }
+  }
+  & h3 {
+    margin-top: 10px;
+    color: $color-1;
+    @include font-size-weight(18px);
+    @media (max-width: 500px) {
+      @include font-size-weight(14px);
+    }
+  }
+}

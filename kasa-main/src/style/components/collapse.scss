@@ -1,13 +1,13 @@
 .collapse {
   &_block {
     color: $color-3;
-    @include flex(row, space-between, center);
+    @include flex(row, space-between, flex-start);
     padding: 20px 15px;
   }
 
   &_title {
     & h3 {
-      color: blue;
+      color: $color-3;
       @include font-size-weight(24px);
     }
   }
@@ -21,6 +21,7 @@
     background: blue;
     padding: 10px;
     height: auto;
+    visibility: visible;
     transition: visibility 0.5s ease-in-out, opacity 0.5s ease-in-out,
       height 0.2s ease-in-out;
   }
@@ -32,7 +33,7 @@
   @media (max-width: 500px) {
     width: 16px;
   }
-  &__up {
+  &_up {
     transform: rotate(0deg);
   }
 
