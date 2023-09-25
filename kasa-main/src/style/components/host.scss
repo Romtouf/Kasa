@@ -1,0 +1,4 @@
+.host {
+  @include flex(row, center, center);
+  gap: 10px;
+}
