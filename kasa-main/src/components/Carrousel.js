@@ -1,49 +1,46 @@
 import React, { useState } from "react";
 import arrowLeft from "../assets/arrow-left.svg";
 import arrowRight from "../assets/arrow-right.svg";
-import Slide from "../data/annonces.json";
 
-const Carrousel = () => {
-  const [counter, setCounter] = useState(1);
-  const [index, setIndex] = useState(1);
-  const length = Slide.length;
-  const newIndex = index - 1;
+const Carrousel = ({ pictures, title }) => {
+  let [index, setIndex] = useState(0);
+
   const handleClickRight = () => {
-    setCounter(counter === length - 1 ? 0 : counter + 1);
-    setIndex(newIndex < 0 ? length - 1 : newIndex);
+    setIndex((image) => (image === pictures.length - 1 ? 0 : image + 1));
   };
   const handleClickLeft = () => {
-    setCounter(counter === 0 ? length - 1 : counter - 1);
-    setIndex(newIndex >= length ? 0 : newIndex);
+    setIndex((image) => (image === 0 ? pictures.length - 1 : image - 1));
   };
-  return (
-    <>
-      <div className="carrousel">
-        <div className="carrousel__arrows">
-          <img
-            src={arrowLeft}
-            alt="Défiler vers la gauche"
-            onClick={handleClickLeft}
-            className="arrow-left"
-          />
-          <img
-            src={arrowRight}
-            alt="Défiler vers la droite"
-            onClick={handleClickRight}
-            className="arrow-right"
-          />
-        </div>
+  const counter = () => {
+    const currentCounter = index + 1;
+    const lengthCounter = pictures.length;
+    return `${currentCounter}/${lengthCounter}`;
+  };
 
-        <span className="counter">
-          {counter}/{length}
-        </span>
-      </div>
-      {Slide.map((pictures, index) => (
-        <div key={index}>
-          <img src={pictures} alt={"image" + { index }} />
-        </div>
-      ))}
-    </>
+  const arrowDisplay = pictures.length > 1;
+
+  return (
+    <div className="carrousel">
+      {arrowDisplay && (
+        <img
+          src={arrowLeft}
+          className="arrow-left"
+          onClick={handleClickLeft}
+          alt={title}
+        />
+      )}
+      <img src={pictures[index]} alt={`${title}`} />
+      {arrowDisplay && (
+        <img
+          src={arrowRight}
+          className="arrow-right"
+          onClick={handleClickRight}
+          alt={title}
+        />
+      )}
+      {arrowDisplay && <div className="counter">{counter()}</div>}
+    </div>
   );
 };
+
 export default Carrousel;

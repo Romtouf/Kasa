@@ -2,7 +2,7 @@ import React from "react";
 import Carrousel from "../components/Carrousel";
 import { Navigate, useParams } from "react-router-dom";
 import data from "../data/annonces.json";
-import Collapse from "../components/Collapse";
+// import Collapse from "../components/Collapse";
 import Tags from "../components/Tags";
 import Host from "../components/Host";
 import Rating from "../components/Rating";
@@ -17,7 +17,7 @@ const Logements = () => {
   return (
     <div className="logement">
       {/* <img src={dataLogement.pictures[0]} /> */}
-      <Carrousel slide={dataLogement.pictures} />
+      <Carrousel pictures={dataLogement.pictures} />
       <div className="logement__infos">
         <div className="logement__infos__text">
           <h2 className="logement__infos__text__title">{dataLogement.title}</h2>
