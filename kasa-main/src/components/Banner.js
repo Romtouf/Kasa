@@ -14,14 +14,14 @@ const Banner = () => {
   }, []);
   return (
     <>
-      <div className="image_home">
+      <div className="image__home">
         {isAbout ? (
           <img src={imageAbout} alt="Vue sur une chaîne montagneuse"></img>
         ) : (
           <>
             <img src={imageHome} alt="Bord de mer"></img>
             <span>
-              Chez vous, <br className="br_none" />
+              Chez vous, <br className="br-none" />
               partout et ailleurs
             </span>
           </>

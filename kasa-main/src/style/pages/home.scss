@@ -19,7 +19,7 @@
     width: 100%;
     border-radius: 10px;
   }
-  &_cards {
+  &__cards {
     @include flex(row, center, normal);
     position: relative;
     height: 340px;

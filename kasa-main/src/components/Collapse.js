@@ -8,16 +8,16 @@ const Collapse = ({ aboutTitle, aboutContent }) => {
   };
   return (
     <div className="collapse">
-      <div className="collapse_block">
-        <h3 className="collapse_title">{aboutTitle}</h3>
+      <div className="collapse__block">
+        <h3 className="collapse__title">{aboutTitle}</h3>
         <img
           onClick={handleToggle}
-          className={isOpen ? "arrow arrow_down" : "arrow arrow_up"}
+          className={isOpen ? "arrow arrow__down" : "arrow arrow__up"}
           src={arrowUp}
           alt="Flèches pour lire le contenu"
         />
       </div>
-      <div className={isOpen ? "collapse_text" : "collapse_hidden"}>
+      <div className={isOpen ? "collapse__text" : "collapse__hidden"}>
         {Array.isArray(aboutContent)
           ? aboutContent.map((index, text) => {
               return <span key={index}>{text}</span>;

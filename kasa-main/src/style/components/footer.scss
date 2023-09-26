@@ -3,7 +3,7 @@
   background-color: $color-4;
   height: 209px;
   gap: 40px;
-  &_image {
+  &__image {
     @include flex(row, center, center);
   }
   & span {

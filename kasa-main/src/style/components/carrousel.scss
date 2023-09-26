@@ -1,0 +1,32 @@
+.carrousel {
+  @include flex(column, center, center);
+  width: 100%;
+  position: relative;
+  &__arrows {
+    @include flex(row, space-between, center);
+  }
+  & img {
+    width: 46.68px;
+    height: 79.2px;
+
+    @media (max-width: 500px) {
+    }
+  }
+}
+
+.arrow-left {
+  @media (max-width: 500px) {
+  }
+}
+
+.arrow-right {
+  @media (max-width: 500px) {
+  }
+}
+
+.counter {
+  position: absolute;
+  top: -40px;
+  left: 565px;
+  color: $color-3;
+}

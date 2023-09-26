@@ -6,12 +6,12 @@ const Error = () => {
     <div className="error">
       <p>404</p>
       <span>
-        Oup's ! La page que <br className="brNone" />
+        Oup's ! La page que <br className="br-none" />
         vous demandez n'existe pas.
       </span>
       <NavLink
         to="/"
-        id="link_error"
+        id="link__error"
         className={(nav) => (nav.isActive ? "nav-active" : "")}
       >
         Retourner sur la page d'accueil

@@ -7,9 +7,9 @@ const About = () => {
   return (
     <>
       <Banner />
-      <div className="about_main">
+      <div className="about__main">
         {about.map(({ aboutId, aboutTitle, aboutContent }) => (
-          <div className="about_main_collapse" key={aboutId}>
+          <div className="about__main__collapse" key={aboutId}>
             <Collapse title={aboutTitle} content={aboutContent} />
           </div>
         ))}

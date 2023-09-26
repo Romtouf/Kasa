@@ -1,4 +1,5 @@
 .logement {
+  position: relative;
   @include flex(column, center, flex-start);
   margin: 0 100px;
   @media (max-width: 500px) {
@@ -23,15 +24,15 @@
     }
   }
 
-  &_infos {
+  &__infos {
     width: 100%;
     @include flex(row, space-between, flex-end);
     @media (max-width: 500px) {
       @include flex(column, flex-start, flex-start);
     }
 
-    &_text {
-      &_location {
+    &__text {
+      &__location {
         margin-top: 5px;
         color: $color-1;
         @include font-size-weight(18px);
@@ -42,7 +43,7 @@
       }
     }
 
-    &_host {
+    &__host {
       @include flex(column, flex-end, flex-end);
       gap: 10px;
       @media (max-width: 500px) {
@@ -66,7 +67,7 @@
         display: inline-flex;
         // margin-left: 10px;
         gap: 10px;
-        background: red;
+        // background: red;
         width: 36px;
         height: 36px;
         margin-bottom: 18px;

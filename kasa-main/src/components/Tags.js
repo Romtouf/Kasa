@@ -5,7 +5,7 @@ const Tags = (props) => {
     <div className="tag">
       {props.tags.map((tag, index) => {
         return (
-          <span className="tag_value" key={index}>
+          <span className="tag__value" key={index}>
             {tag}
           </span>
         );

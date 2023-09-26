@@ -10,7 +10,7 @@ const Home = () => {
       <Banner />
       <div className="gallery">
         {data.map(({ id, title, cover }) => (
-          <NavLink className="gallery_cards" key={id} to={`/logement/${id}`}>
+          <NavLink className="gallery__cards" key={id} to={`/logement/${id}`}>
             <Card title={title} cover={cover} />
           </NavLink>
         ))}
