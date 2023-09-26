@@ -1,32 +1,33 @@
 .carrousel {
   @include flex(column, center, center);
   width: 100%;
-  position: relative;
-  &__arrows {
-    @include flex(row, space-between, center);
+  &__image {
+    height: 415px;
+    width: 100%;
+    position: relative;
   }
-  & img {
-    width: 46.68px;
-    height: 79.2px;
-
-    @media (max-width: 500px) {
+  &__wrap img {
+    height: 80px;
+    width: 47px;
+    position: absolute;
+    top: 170px;
+    cursor: pointer;
+  }
+  &__counter {
+    &__active {
+      position: absolute;
+      left: 845px;
+      top: 370px;
+      color: $color-3;
+      @include font-size-weight(18px);
     }
   }
 }
 
 .arrow-left {
-  @media (max-width: 500px) {
-  }
+  left: 30px;
 }
 
 .arrow-right {
-  @media (max-width: 500px) {
-  }
-}
-
-.counter {
-  position: absolute;
-  top: -40px;
-  left: 565px;
-  color: $color-3;
+  right: 30px;
 }

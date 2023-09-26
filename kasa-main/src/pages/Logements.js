@@ -17,7 +17,7 @@ const Logements = () => {
   return (
     <div className="logement">
       {/* <img src={dataLogement.pictures[0]} /> */}
-      <Carrousel pictures={dataLogement.pictures} />
+      <Carrousel pictures={dataLogement.pictures} title={dataLogement.title} />
       <div className="logement__infos">
         <div className="logement__infos__text">
           <h2 className="logement__infos__text__title">{dataLogement.title}</h2>
@@ -34,11 +34,6 @@ const Logements = () => {
           <Rating stars={dataLogement.rating} />
         </div>
       </div>
-
-      {/* <Collapse
-        description={dataLogement.description}
-        equipments={dataLogement.equipments}
-      /> */}
     </div>
   );
 };
