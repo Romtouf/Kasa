@@ -23,7 +23,7 @@
     @include flex(row, center, normal);
     position: relative;
     height: 340px;
-    width: 30.5%;
+    width: 30%;
     cursor: pointer;
     &::after {
       content: "";

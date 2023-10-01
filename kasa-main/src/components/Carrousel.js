@@ -21,13 +21,12 @@ const Carrousel = ({ pictures, title }) => {
 
   return (
     <div className="carrousel">
-      <div className="carrousel__image">
-        <img
-          className="carrousel__image"
-          src={pictures[index]}
-          alt={`${title}`}
-        />
-      </div>
+      <img
+        className="carrousel__image"
+        src={pictures[index]}
+        alt={`${title}`}
+      />
+
       <div className="carrousel__wrap">
         {arrowDisplay && (
           <img
@@ -49,7 +48,9 @@ const Carrousel = ({ pictures, title }) => {
       </div>
       <div className="carrousel__counter">
         {arrowDisplay && (
-          <div className="carrousel__counter__active">{counter()}</div>
+          <div className="carrousel__counter__active carrousel__counter__inactive">
+            {counter()}
+          </div>
         )}
       </div>
     </div>

@@ -1,4 +1,22 @@
 .host {
   @include flex(row, center, center);
   gap: 10px;
+  @media (max-width: 500px) {
+    gap: 2px;
+  }
+  & p {
+    width: 63px;
+    color: $color-1;
+    @include font-size-weight(18px);
+    text-align: center;
+    @media (max-width: 500px) {
+      @include font-size-weight(12px);
+    }
+  }
+  & img {
+    height: 68px;
+    width: 68px;
+    border-radius: 50px;
+    object-fit: cover;
+  }
 }

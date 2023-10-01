@@ -4,7 +4,12 @@
   &__image {
     height: 415px;
     width: 100%;
+    object-fit: cover;
+    border-radius: 25px;
     position: relative;
+    @media (max-width: 500px) {
+      height: 255px;
+    }
   }
   &__wrap img {
     height: 80px;
@@ -12,11 +17,20 @@
     position: absolute;
     top: 170px;
     cursor: pointer;
+    @media (max-width: 500px) {
+      height: 20px;
+      width: 12px;
+      top: 115px;
+    }
   }
   &__counter {
+    @media (max-width: 500px) {
+      display: none;
+    }
     &__active {
       position: absolute;
-      left: 845px;
+      left: 49%;
+
       top: 370px;
       color: $color-3;
       @include font-size-weight(18px);
@@ -26,8 +40,14 @@
 
 .arrow-left {
   left: 30px;
+  @media (max-width: 500px) {
+    left: 15px;
+  }
 }
 
 .arrow-right {
   right: 30px;
+  @media (max-width: 500px) {
+    right: 15px;
+  }
 }

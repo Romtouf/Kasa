@@ -1,19 +1,11 @@
 .logement {
   position: relative;
   @include flex(column, center, flex-start);
-  margin: 0 100px;
+  margin: 0 100px 50px 100px;
   @media (max-width: 500px) {
-    margin: 0 20px;
+    margin: 0 20px 30px 20px;
   }
-  & img {
-    width: 100%;
-    height: 415px;
-    object-fit: cover;
-    border-radius: 25px;
-    @media (max-width: 500px) {
-      height: 255px;
-    }
-  }
+
   & h2 {
     margin-top: 30px;
     color: $color-1;
@@ -26,12 +18,20 @@
 
   &__infos {
     width: 100%;
-    @include flex(row, space-between, flex-end);
+    @include flex(row, space-between, center);
     @media (max-width: 500px) {
       @include flex(column, flex-start, flex-start);
+      &__hostrating {
+        @media (max-width: 500px) {
+          @include flex(row-reverse, space-between, center);
+          width: 100%;
+          margin-bottom: 10px;
+        }
+      }
     }
 
     &__text {
+      @include flex(column, flex-start, flex-start);
       &__location {
         margin-top: 5px;
         color: $color-1;
@@ -40,37 +40,6 @@
           margin-top: 10px;
           @include font-size-weight(14px);
         }
-      }
-    }
-
-    &__host {
-      @include flex(column, flex-end, flex-end);
-      gap: 10px;
-      @media (max-width: 500px) {
-        @include flex(row-reverse, space-between, flex-end);
-        width: 100%;
-        margin-bottom: 10px;
-      }
-      & img {
-        height: 68px;
-        width: 68px;
-        border-radius: 50px;
-        object-fit: cover;
-      }
-      & p {
-        width: 63px;
-        color: $color-1;
-        @include font-size-weight(18px);
-        text-align: center;
-      }
-      & i {
-        display: inline-flex;
-        // margin-left: 10px;
-        gap: 10px;
-        // background: red;
-        width: 36px;
-        height: 36px;
-        margin-bottom: 18px;
       }
     }
   }

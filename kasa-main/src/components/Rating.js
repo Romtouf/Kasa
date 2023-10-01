@@ -1,4 +1,6 @@
 import React from "react";
+import starActive from "../assets/star-active.svg";
+import starInactive from "../assets/star-inactive.svg";
 
 const Rating = ({ stars }) => {
   const arrayStars = [1, 2, 3, 4, 5];
@@ -6,9 +8,9 @@ const Rating = ({ stars }) => {
     <div className="stars">
       {arrayStars.map((star, index) =>
         stars >= star ? (
-          <i className="fa-solid fa-star red-star" key={index}></i>
+          <img className="stars__red" src={starActive} alt="" key={index} />
         ) : (
-          <i className="fa-solid fa-star grey-star" key={index}></i>
+          <img className="stars__grey" src={starInactive} alt="" key={index} />
         )
       )}
     </div>
