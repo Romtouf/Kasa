@@ -39,7 +39,7 @@ const Logements = () => {
 
       <div className="logement__collapse">
         <Collapse title="Description" content={dataLogement.description} />
-        <Collapse title="Equipments" content={equipments} />
+        <Collapse title="Equipements" content={equipments} />
       </div>
     </div>
   );
